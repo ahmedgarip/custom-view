@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/status"
+            android:layout_width="130dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_chainStyle="spread"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="0dp"
+            android:id="@+id/filelabel" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/statuslabel"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            android:id="@+id/filename" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/status"
+            android:layout_width="130dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_chainStyle="spread"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="0dp"
+            android:id="@+id/statuslabel" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/statuslabel"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            android:id="@+id/status" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/status"
+            android:layout_width="130dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_chainStyle="spread"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:id="@+id/filelabel"
+            motion:layout_constraintBottom_toTopOf="@+id/statuslabel" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/statuslabel"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"
+            android:id="@+id/filename"
+            motion:layout_constraintBottom_toTopOf="@+id/status" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/status"
+            android:layout_width="130dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_chainStyle="spread"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="128dp"
+            android:id="@+id/statuslabel"
+            motion:layout_constraintBottom_toTopOf="@+id/button" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/statuslabel"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="128dp"
+            android:id="@+id/status"
+            motion:layout_constraintBottom_toTopOf="@+id/button" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:autoTransition="animateToEnd" />
+</MotionScene>
